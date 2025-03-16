@@ -85,30 +85,29 @@ index.html<!DOCTYPE html>
     .speaker-card img {
     aspect-ratio: 1 / 1;
     }
-    .committee-photo {
-    height: 180px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px 0 0 8px;
-    }
+    .committee-photo-container {
+    height: 280px;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
 
-    .committee-card {
+.committee-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s;
+}
+
+.committee-card:hover .committee-photo {
+    transform: scale(1.05);
+}
+
+.committee-card {
     border-radius: 8px;
     overflow: hidden;
-    }
-
-   .committee-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-   }
-
-   @media (max-width: 768px) {
-    .committee-photo {
-        border-radius: 8px 8px 0 0;
-        height: 220px;
-    }
-    }
+    border: none;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -174,7 +173,7 @@ index.html<!DOCTYPE html>
                                      class="card-img-top mx-auto" 
                                      alt="Qi Ye">
                                 <div class="card-body">
-                                    <h5 class="card-title">Dr. Qi Ye</h5>
+                                    <h5 class="card-title">Qi Ye</h5>
                                     <p class="card-text text-muted">Zhejiang University</p>
                                 </div>
                             </div>
@@ -296,72 +295,61 @@ index.html<!DOCTYPE html>
 
         <!-- Committee Section -->
         <section id="committee" class="section-header">
-    <div class="container">
-        <h2 class="text-center mb-5">Organizing Committee</h2>
-        <div class="row g-4">
-            <!-- 委员会成员1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card committee-card hover-effect">
-                    <div class="row g-0">
-                        <!-- 照片区 -->
-                        <div class="col-md-5">
-                            <img src="images/committee/Gaofengli_speaker.png" 
-                                 alt="Gaofeng Li"
-                                 class="committee-photo">
-                        </div>
-                        <!-- 信息区 -->
-                        <div class="col-md-7">
-                            <div class="card-body">
+            <div class="container">
+                <h2 class="text-center mb-5">Organizing Committee</h2>
+                <div class="row g-4">
+                    <!-- 成员1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card committee-card hover-effect">
+                            <!-- 照片在上 -->
+                            <div class="committee-photo-container">
+                                <img src="images/committee/Gaofengli_speaker.png" 
+                                     alt="Gaofeng Li"
+                                     class="committee-photo">
+                            </div>
+                            <!-- 信息在下 -->
+                            <div class="card-body text-center">
                                 <h5 class="card-title">Gaofeng Li</h5>
-                                <p class="card-subtitle text-muted">https://person.zju.edu.cn/en/gaofengli</p>
+                                <p class="card-subtitle text-muted">Program Chair</p>
                                 <p class="card-text mt-2 small">Zhejiang University</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- 委员会成员2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card committee-card hover-effect">
-                    <div class="row g-0">
-                        <div class="col-md-5">
-                            <img src="images/committee/YIlinMo.png"
-                                 alt="Yilin Mo"
-                                 class="committee-photo">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="card-body">
+                     <!-- 成员2 -->
+                     <div class="col-md-6 col-lg-4">
+                        <div class="card committee-card hover-effect">
+                            <!-- 照片在上 -->
+                            <div class="committee-photo-container">
+                                <img src="images/committee/YIlinMo.png" 
+                                     alt="Yilin Mo"
+                                     class="committee-photo">
+                            </div>
+                            <!-- 信息在下 -->
+                            <div class="card-body text-center">
                                 <h5 class="card-title">Yilin Mo</h5>
                                 <p class="card-subtitle text-muted">General Chair</p>
                                 <p class="card-text mt-2 small">Tsinghua University</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- 委员会成员3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="card committee-card hover-effect">
-                    <div class="row g-0">
-                        <div class="col-md-5">
-                            <img src="images/committee/Guanjun-Bao .jpg"
-                                 alt="Guanjun Bao"
-                                 class="committee-photo">
-                        </div>
-                        <div class="col-md-7">
-                            <div class="card-body">
-                                <h5 class="card-title">Yilin Mo</h5>
-                                <p class="card-subtitle text-muted">https://homepage.zjut.edu.cn/bgj/ </p>
+                    <!-- 成员3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card committee-card hover-effect">
+                            <!-- 照片在上 -->
+                            <div class="committee-photo-container">
+                                <img src="images/committee/Guanjun-Bao .jpg" 
+                                     alt="Guanjun Bao"
+                                     class="committee-photo">
+                            </div>
+                            <!-- 信息在下 -->
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Guanjun Bao</h5>
+                                <p class="card-subtitle text-muted">Program Chair</p>
                                 <p class="card-text mt-2 small">Zhejiang University of Technology</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- 继续添加其他成员 -->
+                    <!-- Add more members -->
         </div>
     </div>
 </section>
