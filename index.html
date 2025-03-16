@@ -85,6 +85,30 @@ index.html<!DOCTYPE html>
     .speaker-card img {
     aspect-ratio: 1 / 1;
     }
+    .committee-photo {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+    }
+
+    .committee-card {
+    transition: transform 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+    }
+
+   .committee-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+   }
+
+   @media (max-width: 768px) {
+    .committee-photo {
+        border-radius: 8px 8px 0 0;
+        height: 220px;
+    }
+    }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -199,47 +223,47 @@ index.html<!DOCTYPE html>
                         <tbody>
                             <tr>
                                 <td>08:40 - 09:00</td>
-                                <td>欢迎及开幕致辞</td>
+                                <td>Welcome & Opening Remarkss</td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>09:00 - 09:25</td>
-                                <td>A演讲主题</td>
-                                <td>AAAA</td>
+                                <td>Presentation Topic 1</td>
+                                <td>Speaker1</td>
                             </tr>
                             <tr>
                                 <td>09:25 - 09:40</td>
-                                <td>B演讲主题</td>
-                                <td>BBBB</td>
+                                <td>Presentation Topic 2</td>
+                                <td>Speaker2</td>
                             </tr>
                             <tr>
                                 <td>09:40 - 10:10</td>
-                                <td>C演讲主题</td>
-                                <td>CCCC</td>
+                                <td>Presentation Topic 3</td>
+                                <td>Speaker3</td>
                             </tr>
                             <tr>
                                 <td>10:10 - 11:00</td>
-                                <td>茶歇及海报展示</td>
+                                <td>Coffee Break, Poster session & AMA (Ask Me Anything) panel</td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>11:00 - 11:25</td>
-                                <td>每人 8 分钟 + 3 分钟问答<br><small>(最佳海报展示)</small></td>
+                                <td>8 minutes each + 3 min Q&A<br><small>(Best Poster Presentation)</small></td>
                                 <td>-</td>
                             </tr>
                             <tr>
                                 <td>11:25 - 11:55</td>
-                                <td>D演讲主题</td>
-                                <td>DDDD</td>
+                                <td>Speaker4</td>
+                                <td>Presentation Topic 4</td>
                             </tr>
                             <tr>
                                 <td>11:55 - 12:25</td>
-                                <td>E演讲主题</td>
-                                <td>EEEE</td>
+                                <td>Presentation Topic 5</td>
+                                <td>Speaker5</td>
                             </tr>
                             <tr>
                                 <td>12:25 - 12:30</td>
-                                <td>结束语</td>
+                                <td>Closing Remarks</td>
                                 <td>-</td>
                             </tr>
                         </tbody>
@@ -272,21 +296,75 @@ index.html<!DOCTYPE html>
 
         <!-- Committee Section -->
         <section id="committee" class="section-header">
-            <div class="container">
-                <h2 class="text-center mb-5">Organizing Committee</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card committee-card">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Prof. Michael Chen</h5>
-                                <p class="card-subtitle mb-2 text-muted">General Chair</p>
+    <div class="container">
+        <h2 class="text-center mb-5">Organizing Committee</h2>
+        <div class="row g-4">
+            <!-- 委员会成员1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card committee-card hover-effect">
+                    <div class="row g-0">
+                        <!-- 照片区 -->
+                        <div class="col-md-5">
+                            <img src="images/committee/Gaofengli_speaker.png" 
+                                 alt="Gaofeng Li"
+                                 class="committee-photo">
+                        </div>
+                        <!-- 信息区 -->
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Gaofeng Li</h5>
+                                <p class="card-subtitle text-muted">https://person.zju.edu.cn/en/gaofengli</p>
+                                <p class="card-text mt-2 small">Zhejiang University</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Add more members -->
                 </div>
             </div>
-        </section>
+
+            <!-- 委员会成员2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card committee-card hover-effect">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="images/committee/YIlinMo.png"
+                                 alt="Yilin Mo"
+                                 class="committee-photo">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Yilin Mo</h5>
+                                <p class="card-subtitle text-muted">General Chair</p>
+                                <p class="card-text mt-2 small">Tsinghua University</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 委员会成员3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card committee-card hover-effect">
+                    <div class="row g-0">
+                        <div class="col-md-5">
+                            <img src="images/committee/Guanjun-Bao .jpg"
+                                 alt="Guanjun Bao"
+                                 class="committee-photo">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Yilin Mo</h5>
+                                <p class="card-subtitle text-muted">https://homepage.zjut.edu.cn/bgj/ </p>
+                                <p class="card-text mt-2 small">Zhejiang University of Technology</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 继续添加其他成员 -->
+        </div>
+    </div>
+</section>
 
         <!-- Contact Section -->
         <section id="contact" class="section-header bg-dark text-white">
