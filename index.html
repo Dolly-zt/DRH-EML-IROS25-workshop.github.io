@@ -66,6 +66,25 @@ index.html<!DOCTYPE html>
         z-index: 1;
         color: white;
     }
+    .card-link {
+    transition: transform 0.3s ease;
+    display: block;
+    text-decoration: none !important;
+    color: inherit;
+    }
+
+    .card-link:hover {
+    transform: translateY(-5px);
+    }
+
+    .card-link:active {
+    transform: scale(0.98);
+   }
+
+     /* 保持图片比例 */
+    .speaker-card img {
+    aspect-ratio: 1 / 1;
+    }
     </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -97,7 +116,7 @@ index.html<!DOCTYPE html>
         <section id="home" class="hero-banner">
             <div class="banner-overlay"></div>
             <div class="container text-center banner-content">
-                <h1 class="display-3 mb-4">Dexterous Robotic Hand with Embodied Manipulation Learning</h1>
+                <h1 class="display-3 mb-4">Dexterous Robotic Hand with Embodied Manipulation Learning​</h1>
                 <p class="lead">DRH-EML</p>
             </div>
         </section>
@@ -125,13 +144,17 @@ index.html<!DOCTYPE html>
                 <div class="row g-4">
                     <!-- Speaker 1 -->
                     <div class="col-md-6 col-lg-4">
-                        <div class="card speaker-card text-center p-3">
-                            <img src="Gaofengli_speaker.png" class="card-img-top mx-auto" alt="Speaker 1">
-                            <div class="card-body">
-                                <h5 class="card-title">Dr. Gaofeng li</h5>
-                                <p class="card-text text-muted">ZheJiang University</p>
+                        <a href="speaker1.html" class="card-link">
+                            <div class="card speaker-card text-center p-3 hover-effect">
+                                <img src="yeqi.jpg" 
+                                     class="card-img-top mx-auto" 
+                                     alt="Qi Ye">
+                                <div class="card-body">
+                                    <h5 class="card-title">Dr. Qi Ye</h5>
+                                    <p class="card-text text-muted">Zhejiang University</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
         
                     <!-- Speaker 2 -->
