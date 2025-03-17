@@ -31,6 +31,27 @@ index.html<!DOCTYPE html>
             justify-content: center;
         }
 
+        .about-image {
+    transition: transform 0.3s ease;
+    border: 3px solid #fff;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.about-image:hover {
+    transform: scale(1.03);
+}
+
+.about-content {
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+    padding: 2rem;
+    border-radius: 12px;
+}
+
+@media (max-width: 992px) {
+    .about-image {
+        margin-bottom: 2rem;
+    }
+}
         .speaker-card img {
             width: 200px;
             height: 200px;
